@@ -1,202 +1,145 @@
-/* ========== BASE STYLES ========== */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* ========== NAVIGATION ========== */
 nav {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    width: 100%;
-    padding: 1.5rem 0;
+    background: #333;
+    padding: 1rem;
     position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 2rem;
 }
 
 nav a {
     color: white;
+    margin: 0 1rem;
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    background-color: rgba(255,255,255,0.2);
+section {
+    min-height: 100vh;
+    padding: 4rem 2rem 2rem;
 }
 
-/* ========== MAIN CONTENT ========== */
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin-top: 80px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ========== HERO SECTION ========== */
-#home {
-    text-align: center;
-    padding: 3rem 0;
-}
-
-/* ========== PROFILE PICTURE ADDITION ========== */
-.profile-image {
-    width: 150px;          /* Makes the image smaller */
-    height: 150px;         /* Maintains aspect ratio */
-    border-radius: 50%;    /* Makes it perfectly round */
-    object-fit: cover;     /* Ensures the image fills the circle without distortion */
-    border: 3px solid #6e8efb; /* Optional: adds a colored border */
-    margin: 1rem 0;        /* Adds some spacing */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: subtle shadow */
-}
-
-/* For responsive adjustment */
-@media (max-width: 768px) {
-    .profile-image {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-#home h1 {
-    font-size: 2.5rem;
-    color: #6e8efb;
+h1, h2 {
     margin-bottom: 1rem;
+    color: #2c3e50;
 }
 
-#home p {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
-}
-
-/* ========== ABOUT SECTION ========== */
-#about {
-    width: 100%;
-    padding: 2rem 0;
-}
-
-#about h2 {
-    color: #a777e3;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-#about p {
-    margin-bottom: 1.5rem;
-    color: #555;
-    text-align: center;
-}
-
-/* ========== SKILLS SECTION ========== */
-#skills {
-    width: 100%;
-    padding: 2rem 0;
-}
-
-#skills h2 {
-    color: #fd6e6a;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-#skills ul {
-    list-style-position: inside;
-    margin-left: 1rem;
-}
-
-#skills li {
-    margin-bottom: 0.8rem;
-    color: #555;
-}
-
-#skills li strong {
-    color: #fd6e6a;
-}
-
-/* ========== PROJECTS SECTION ========== */
-#projects {
-    width: 100%;
-    padding: 2rem 0;
-}
-
-#projects h2 {
-    color: #4caf50;
-    margin-bottom: 1.5rem;
-    text-align: center;
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem 0;
+    border: 4px solid #3498db;
 }
 
 .project {
     background: white;
-    padding: 1.5rem;
-    margin: 1rem auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 600px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.project h3 {
-    color: #6e8efb;
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form {
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Blog specific styles */
+.blog-posts {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.blog-post {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-post h3 {
+    color: #2c3e50;
     margin-bottom: 0.5rem;
 }
 
-.project p {
-    color: #666;
+.blog-post .post-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
 }
 
-/* ========== COLORFUL TEXT ELEMENTS ========== */
-.tech-skill {
-    color: #6e8efb;
-    font-weight: 600;
+.blog-post .post-excerpt {
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
-.web-skill {
-    color: #4caf50;
-    font-weight: 600;
+.search-container {
+    margin: 1rem 0;
+    text-align: center;
 }
 
-.soft-skill {
-    color: #fd6e6a;
-    font-weight: 600;
-}
-
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
-    nav ul {
-        gap: 1rem;
-    }
-    
-    #home h1 {
-        font-size: 2rem;
-    }
-    
-    #home p {
-        font-size: 1rem;
-    }
+#blog-search {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
