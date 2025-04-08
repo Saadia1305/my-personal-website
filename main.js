@@ -16,6 +16,36 @@ navLinks.forEach(link => {
   });
 });
 
+// Animate skill bars on scroll
+function animateSkills() {
+    const skills = document.querySelectorAll('.skill-item');
+    
+    skills.forEach(skill => {
+        const percent = skill.getAttribute('data-percent');
+        const progressBar = skill.querySelector('.skill-progress');
+        
+        // Only animate if in viewport
+        if (isElementInViewport(skill)) {
+            progressBar.style.width = `${percent}%`;
+        }
+    });
+}
+
+// Helper function to check if element is in viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Run on load and scroll
+window.addEventListener('load', animateSkills);
+window.addEventListener('scroll', animateSkills);
+
 // ========== BLOG FUNCTIONALITY ========== //
 const blogPosts = [
   {
