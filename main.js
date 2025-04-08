@@ -19,30 +19,30 @@ navLinks.forEach(link => {
 // ========== BLOG FUNCTIONALITY ========== //
 const blogPosts = [
   {
-    date: "2025-04-10",
+    date: "2025-04-02",
         title: "My Journey Into Web Development",
-        excerpt: "I started coding when I was 15 years old. What began as a hobby quickly became a passion that shaped my career path...",
+        excerpt: "I started coding my first time after i joined university, first time wasnt really easy but  What began as a hobby quickly became a passion that shaped my career path...",
         content: "Full content about your web development journey...",
         category: "personal"
   },
   {
-    date: "2025-04-15", 
-        title: "Why I Love JavaScript",
-        excerpt: "JavaScript wasn't my first programming language, but it's the one I enjoy working with the most...",
+    date: "2025-04-02", 
+        title: "Why I Love HTML",
+        excerpt: "Html was my first programming language i really loved and enoyed the html language as it seemed easy to me and also JavaScript wasn't my first programming language, but it's also one I enjoy working with ...",
         content: "Full content about why you love JavaScript...",
         category: "technical"
   },
   {
-    date: "2025-04-20",
-        title: "My Favorite Development Tools",
-        excerpt: "After trying dozens of editors and tools, these are the ones that made it to my daily workflow...",
+    date: "2025-04-02",
+        title: "My Development Tools",
+        excerpt: "After trying dozens of editors and tools, my most used tool for development is Git (for vision) and there are soo many others that i use mostly for development...",
         content: "Full content about your favorite tools...",
         category: "technical"
   },
     {
-        date: "2025-04-25",
-        title: "How I Stay Productive While Learning",
-        excerpt: "Learning new technologies can be overwhelming. Here's my system for staying focused and making progress...",
+        date: "2025-04-01",
+        title: "Ways that i stay productive while learning new languages",
+        excerpt: "As a developer you learn new technologies everytime which can be very overwhelming and tiring but we still have to learn so here's my system for staying focused and making progress...",
         content: "Full content about your productivity system...",
         category: "personal"
 }
