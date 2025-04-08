@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* ========== BASE STYLES ========== */
 * {
     margin: 0;
     padding: 0;
@@ -6,112 +6,127 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    background-color: #f8f9fa;
     color: #333;
-    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* ========== CENTERED LAYOUT ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== NAVIGATION ========== */
 nav {
-    background: #333;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
+    background: #2c3e50;
+    padding: 1.5rem 0;
+    position: sticky;
     top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
-    color: white;
-    margin: 0 1rem;
+    color: #ecf0f1;
+    margin: 0 1.5rem;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
+nav a:hover {
+    color: #3498db;
+}
+
+/* ========== SECTIONS ========== */
 section {
-    min-height: 100vh;
-    padding: 4rem 2rem 2rem;
+    padding: 4rem 0;
+    text-align: center;
 }
 
-h1, h2 {
-    margin-bottom: 1rem;
+section h1, section h2 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* ========== COLORFUL TEXT ELEMENTS ========== */
+#home h1 {
     color: #2c3e50;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 1rem 0;
-    border: 4px solid #3498db;
+#home p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
 
+#about h2 {
+    color: #3498db;
+}
+
+#projects h2 {
+    color: #e74c3c;
+}
+
+#blog h2 {
+    color: #2ecc71;
+}
+
+#contact h2 {
+    color: #9b59b6;
+}
+
+/* ========== PROJECT CARDS ========== */
 .project {
     background: white;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    cursor: pointer;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    max-width: 600px;
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-form {
-    max-width: 500px;
-    margin: 1rem auto;
+.project h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.project-desc {
+    color: #7f8c8d;
 }
 
-button {
-    background: #3498db;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    nav {
-        text-align: center;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-}
-
-/* Blog specific styles */
-.blog-posts {
-    max-width: 800px;
-    margin: 2rem auto;
-}
-
+/* ========== BLOG POSTS ========== */
 .blog-post {
     background: white;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
 }
 
 .blog-post h3 {
@@ -119,27 +134,69 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.blog-post .post-date {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    display: block;
+.post-date {
+    color: #3498db;
+    font-weight: 600;
 }
 
-.blog-post .post-excerpt {
-    margin-bottom: 1rem;
-    line-height: 1.6;
+.post-excerpt {
+    color: #34495e;
 }
 
-.search-container {
-    margin: 1rem 0;
-    text-align: center;
+.read-more {
+    color: #e74c3c;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-#blog-search {
-    padding: 0.5rem;
+/* ========== CONTACT FORM ========== */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
     width: 100%;
-    max-width: 400px;
-    border: 1px solid #ddd;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 2px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
 }
