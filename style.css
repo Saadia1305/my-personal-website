@@ -13,7 +13,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
 /* ========== NAVIGATION ========== */
@@ -47,42 +46,39 @@ nav a:hover {
     background-color: rgba(255,255,255,0.2);
 }
 
-/* Active page indicator */
-nav a.active {
-    background-color: rgba(255,255,255,0.3);
-    font-weight: 700;
-}
-
-/* ========== PAGE CONTENT ========== */
-.page {
+/* ========== MAIN CONTENT ========== */
+main {
     width: 90%;
     max-width: 1000px;
     margin-top: 80px;
     padding: 2rem;
-    display: none; /* Hide all pages by default */
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Show only the active page */
-.page.active {
-    display: flex;
-}
-
-/* ========== HOME PAGE ========== */
+/* ========== HERO SECTION ========== */
 #home {
     text-align: center;
     padding: 3rem 0;
 }
+/* ========== PROFILE PICTURE ADDITION ========== */
+.profile-image {
+    width: 150px;          /* Makes the image smaller */
+    height: 150px;         /* Maintains aspect ratio */
+    border-radius: 50%;    /* Makes it perfectly round */
+    object-fit: cover;     /* Ensures the image fills the circle without distortion */
+    border: 3px solid #6e8efb; /* Optional: adds a colored border */
+    margin: 1rem 0;        /* Adds some spacing */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+}
 
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Ensures the image fills the circle */
-    border: 4px solid #6e8efb;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* For responsive adjustment */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 #home h1 {
@@ -98,7 +94,7 @@ nav a.active {
     margin: 0 auto 1.5rem;
 }
 
-/* ========== ABOUT PAGE ========== */
+/* ========== ABOUT SECTION ========== */
 #about {
     width: 100%;
     padding: 2rem 0;
@@ -116,7 +112,7 @@ nav a.active {
     text-align: center;
 }
 
-/* ========== SKILLS PAGE ========== */
+/* ========== SKILLS SECTION ========== */
 #skills {
     width: 100%;
     padding: 2rem 0;
@@ -126,20 +122,6 @@ nav a.active {
     color: #fd6e6a;
     margin-bottom: 1.5rem;
     text-align: center;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.skill-category {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 #skills ul {
@@ -156,7 +138,7 @@ nav a.active {
     color: #fd6e6a;
 }
 
-/* ========== PROJECTS PAGE ========== */
+/* ========== PROJECTS SECTION ========== */
 #projects {
     width: 100%;
     padding: 2rem 0;
@@ -168,24 +150,14 @@ nav a.active {
     text-align: center;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
-}
-
 .project {
     background: white;
     padding: 1.5rem;
+    margin: 1rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
     transition: all 0.3s ease;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .project h3 {
@@ -195,14 +167,6 @@ nav a.active {
 
 .project p {
     color: #666;
-}
-
-.project-image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    height: 180px;
-    object-fit: cover;
 }
 
 /* ========== COLORFUL TEXT ELEMENTS ========== */
@@ -225,8 +189,6 @@ nav a.active {
 @media (max-width: 768px) {
     nav ul {
         gap: 1rem;
-        flex-wrap: wrap;
-        padding: 0 1rem;
     }
     
     #home h1 {
@@ -236,9 +198,4 @@ nav a.active {
     #home p {
         font-size: 1rem;
     }
-
-    .profile-picture {
-        width: 120px;
-        height: 120px;
-    }
-}
+} 
