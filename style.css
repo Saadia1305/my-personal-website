@@ -71,7 +71,7 @@ section h1, section h2 {
     margin-bottom: 1rem;
 }
 /* ========== PROFILE PICTURE ADDITION ========== */
-.profile-image {
+#home profile-img {
     width: 150px;         
     height: 150px;         
     border-radius: 50%;    
@@ -83,7 +83,7 @@ section h1, section h2 {
 
 /* For responsive adjustment */
 @media (max-width: 768px) {
-    .profile-image {
+    .profile-img {
         width: 120px;
         height: 120px;
     }
