@@ -81,18 +81,77 @@
     </div>
 </div>
 
-    <section id="projects" class="section">
-        <h2>My Projects</h2>
-        <div class="project" onclick="showDetails('project1')">
-            <h3>Premiere league table project</h3>
-            <p class="project-desc">A simple Premiere league table project</p>
+        <section id="projects" class="section">
+    <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+    <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+    </div>
+    <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="web">
+            <div class="project-img">
+                <img src="pl table.png"alt="Premier League Table">
+            </div>
+            <div class="project-info">
+                <h3>Premier League Table</h3>
+                <p>A dynamic football league table with live standings and team statistics</p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>API</span>
+                    <span>Sports</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
         </div>
-        <div class="project" onclick="showDetails('project2')">
-            <h3>Task Manager</h3>
-            <p class="project-desc">A productivity application</p>
+        
+        <!-- Project 2 -->
+        <div class="project-card" data-category="web">
+            <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Task Manager">
+            </div>
+            <div class="project-info">
+                <h3>Task Manager</h3>
+                <p>A productivity application with drag-and-drop functionality and reminders</p>
+                <div class="project-tags">
+                    <span>React</span>
+                    <span>Firebase</span>
+                    <span>Productivity</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
         </div>
-    </section>
-
+        
+        <!-- Project 3 -->
+        <div class="project-card" data-category="data">
+            <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Data Visualization">
+            </div>
+            <div class="project-info">
+                <h3>COVID-19 Tracker</h3>
+                <p>Interactive data visualization of pandemic statistics with filtering options</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>D3.js</span>
+                    <span>Data</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
     <section id="blog" class="section">
         <h2>Blog</h2>
         <div class="search-container">
