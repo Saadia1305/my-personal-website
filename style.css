@@ -70,6 +70,24 @@ section h1, section h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+/* ========== PROFILE PICTURE ADDITION ========== */
+.profile-image {
+    width: 150px;          /* Makes the image smaller */
+    height: 150px;         /* Maintains aspect ratio */
+    border-radius: 50%;    /* Makes it perfectly round */
+    object-fit: cover;     /* Ensures the image fills the circle without distortion */
+    border: 3px solid #6e8efb; /* Optional: adds a colored border */
+    margin: 1rem 0;        /* Adds some spacing */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+}
+
+/* For responsive adjustment */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
 
 #home p {
     color: #7f8c8d;
