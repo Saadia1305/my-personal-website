@@ -5,90 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="themes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle">Toggle Theme</button></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="home" class="section">
-            <h1 id="dynamic-greeting">Welcome, get to know more about me</h1>
-            <p>This is Saadia Hussein's personal website</p>
-        </section>
-        
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <div class="about-content">
-               <img src="https://github.com/Saadia1305/my-personal-website/raw/refs/heads/main/IMG_7240.heic" alt="My profile">
-                <div class="about-text">
-                    <p>Hi, this is Saadia Hussein i am an IST major student i am in my last semester of my second year <br> I do like trying to develop websites as its my dream to become a developer </br> </p>
-                    <div class="skills">
-                        <h3>My Skills</h3>
-                        <p>some of my major skills are; <br>1. Technical Skills</br> <br>2. Web Development</br> <br> 3. Soft Skills such as problem solving</br></p>
-                        <div class="skill-bars"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="portfolio" class="section">
-            <h2>My Projects</h2>
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="data">Data</button>
-            </div>
-            <div class="projects-grid"></div>
-        </section>
-        
-        <section id="blog" class="section">
-            <h2>My Blog</h2>
-            <div class="blog-search">
-                <input type="text" id="blog-search" placeholder="Search blogs...">
-            </div>
-            <div class="blog-posts"></div>
-        </section>
-        
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Site</h1>
+        <p>I'm a passionate developer</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="My Photo" class="profile-img">
+        <p>I love creating web applications and solving problems with code.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project" onclick="showDetails('project1')">
+            <h3>Weather App</h3>
+            <p class="project-desc">A simple weather application</p>
+        </div>
+        <div class="project" onclick="showDetails('project2')">
+            <h3>Task Manager</h3>
+            <p class="project-desc">A productivity application</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="search-container">
+            <input type="text" id="blog-search" placeholder="Search blog posts...">
+        </div>
+        <div class="blog-posts" id="blog-posts">
+            <!-- Blog posts will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2025 My Personal Website</p>
     </footer>
-    
-    <script src="js/main.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/blog.js"></script>
-    <script src="js/form.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
