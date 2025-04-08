@@ -1,0 +1,18 @@
+/* Dark theme styles */
+.dark-theme {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-theme #main-nav {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-theme .project-card {
+    background-color: var(--dark-card);
+}
+
+.dark-theme #theme-toggle {
+    background-color: #333;
+    color: #fff;
+}
