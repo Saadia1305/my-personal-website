@@ -94,13 +94,13 @@ const projects = [
   {
     id: 1,
     title: "Fotmob App",
-    description: "A simple weather application",
+    description: "A simple Football application",
     category: "web"
   },
   {
     id: 2,
     title: "Data Manager",
-    description: "A productivity application", 
+    description: "A data application", 
     category: "web"
   },
   {
