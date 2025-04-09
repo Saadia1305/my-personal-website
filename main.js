@@ -93,13 +93,13 @@ function renderBlogPosts(posts) {
 const projects = [
   {
     id: 1,
-    title: "Weather App",
+    title: "Fotmob App",
     description: "A simple weather application",
     category: "web"
   },
   {
     id: 2,
-    title: "Task Manager",
+    title: "Data Manager",
     description: "A productivity application", 
     category: "web"
   },
